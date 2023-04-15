@@ -1,0 +1,36 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    float a, b, c;
+    
+    scanf("%f %f %f", &a, &b, &c);
+    
+    float t; // area triangulo
+    
+    t = (a * c) / 2;
+    
+    float ci; // area circulo
+    
+    ci = c * c * 3.14159; // raio * raio * pi
+    
+    float p; // area trapezio
+    
+    p = ((a + b) * c) / 2;
+    
+    float q; // area quadrado
+    
+    q = b * b;
+    
+    float r; // area retangulo
+
+    r = a * b;
+    
+    printf("TRIANGULO: %.3f\n", t);
+    printf("CIRCULO: %.3f\n", ci);
+    printf("TRAPEZIO: %.3f\n", p);
+    printf("QUADRADO: %.3f\n", q);
+    printf("RETANGULO: %.3f\n", r);
+ 
+    return 0;
+}

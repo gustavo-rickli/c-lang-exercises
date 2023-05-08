@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+/*
+
+Fazer um programa para calcular o troco no processo de pagamento de um produto de uma
+mercearia.
+
+- O programa deve ler o preço unitário do produto,
+- a quantidade de unidades compradas
+deste produto,
+- e o valor em dinheiro dado pelo cliente.
+
+
+Seu programa deve mostrar o valor do troco a
+ser devolvido ao cliente.
+
+Se o dinheiro dado pelo cliente não for suficiente, mostrar uma mensagem
+informando o valor restante conforme exemplo.
+
+*/
+int main() {
+
+  float valor_unidade;
+
+  printf("\n\nDigite o valor do produto: ");
+  scanf("%f", &valor_unidade);
+
+  int quantidade_produto;
+  
+  printf("\nDigite a quantidade do produto: ");
+  scanf("%d", &quantidade_produto);
+  
+  float dinheiro_cliente;
+
+  printf("\nQuantidade de dinheiro do cliente: ");
+  scanf("%f", &dinheiro_cliente);
+
+  float total_compra;
+
+  total_compra = quantidade_produto * valor_unidade;
+    
+  if (dinheiro_cliente >= total_compra) {
+    float troco_cliente;
+
+    troco_cliente = dinheiro_cliente - total_compra;
+
+    printf("\n\n> Compra feita, seu troco será de R$%.2f", troco_cliente);
+  } else {
+    printf("\n\n> Dinheiro insufiente, faltou R$%.2f", (total_compra - dinheiro_cliente) );
+  }
+  
+  return 0;
+}
+  

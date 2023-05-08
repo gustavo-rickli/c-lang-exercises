@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+
+  /*
+  Uma operadora de telefonia cobra R$ 50.00 por um plano básico que dá direito a 100 minutos de
+telefone. Cada minuto que exceder a franquia de 100 minutos custa R$ 2.00. Fazer um programa para
+ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago. 
+  */
+
+  int minutos_consumidos;
+
+  printf("Digite a quantidade de minutos: ");
+  scanf("%d", &minutos_consumidos);
+
+  int limite_franquia = 100;
+
+  if (minutos_consumidos > limite_franquia) {
+    int minutos_excedidos;
+
+    minutos_excedidos = minutos_consumidos - limite_franquia;
+    
+    int valor_total, plano_basico = 50, custo_minuto_adicional = 2;
+    
+    valor_total = minutos_excedidos * custo_minuto_adicional;
+    valor_total = valor_total + plano_basico;
+    
+    printf("\nValor a pagar: R$%d.00", valor_total);
+  } else {
+      printf("\nValor a pagar: R$50.00");
+  }
+  
+  return 0;
+}
+  

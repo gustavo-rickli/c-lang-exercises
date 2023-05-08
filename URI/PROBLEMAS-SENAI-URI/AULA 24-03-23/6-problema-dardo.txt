@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+/*
+
+No arremesso de dardo, o atleta tem três chances para lançar o dardo à maior distância que
+conseguir.
+
+Você deve criar um programa para, dadas as medidas das três tentativas de lançamento, informar qual foi a maior.
+
+*/
+
+
+int main() {
+
+  float first_distance, second_distance, third_distance;
+  
+  printf("\n\nDigite as tres ditancias: ");
+  scanf("%f %f %f", &first_distance, &second_distance, &third_distance);
+
+  // Multiplicar por 100 para pegar as 2 casas decimais,
+  // Para poder comparar as distancias corretamente
+  first_distance = first_distance * 100;
+  second_distance = second_distance * 100;
+  third_distance = third_distance * 100;
+
+  if (first_distance == second_distance && first_distance == third_distance) {
+   printf("Ditancias iguais"); 
+  } else {
+    float greater_distance;
+
+    // Definimos por padrao a primeira distancia como a maior
+    greater_distance = first_distance;
+
+    // Se a segunda distancia eh maior que a 1a e 3a
+    if (second_distance >= first_distance && second_distance >= third_distance) {
+      greater_distance = second_distance;
+    }
+
+    // Se a terceira distancia eh maior que a 1a e 2a
+    if (third_distance >= first_distance && third_distance >= second_distance) {
+      greater_distance = third_distance;
+    }
+
+    // Dividir o maior numero por 100 para poder exibir corretamente 
+    greater_distance = greater_distance / 100;
+      
+    printf("MAIOR DISTANCIA = %.2f\n", greater_distance);
+  }
+  
+  return 0;
+}
+  

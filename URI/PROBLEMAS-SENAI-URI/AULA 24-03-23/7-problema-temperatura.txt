@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+/*
+
+Deseja-se converter uma medida de temperatura da escala Celsius para Fahrenheit ou vice-versa.
+
+Para isso, você deve construir um programa que leia a letra "C" ou "F" indicando em qual escala
+vai ser informada uma temperatura.
+
+Em seguida o programa deve mostrar a temperatura na outra
+escala com duas casas decimais.
+
+A seguir é dada a fórmula para converter de Fahrenheit para Celsius (você deve deduzir a fórmula de Celsius para Fahrenheit):
+
+*/
+
+
+int main() {
+
+  char conversion_measure;
+  
+  printf("\n\nDeseja-se converter uma medida de Celsius para Fahrenheit (C) ou Vice-versa (F): ");
+  
+  scanf("%c", &conversion_measure);
+
+  // Celsius para Fahrenheit
+  if (conversion_measure == 'c' || conversion_measure == 'C') {
+    float celsius_temperature;
+    
+    printf("\n\nInforme um valor em Celsius: ");
+    scanf("%f", &celsius_temperature);
+
+    float fahrenheit_temperature;
+
+    // Formula para transformar Temp. em Celsius para Fahrenheit
+    // F = 1.8 * C + 32
+    fahrenheit_temperature = (1.8 * celsius_temperature) + 32;
+
+    printf("\n\n> Temperatura equivalente em Fahrenheit: %.2f", fahrenheit_temperature);
+  }
+
+  // Fahrenheit para Celsius
+  if (conversion_measure == 'f' || conversion_measure == 'F') {
+    float fahrenheit_temperature;
+    
+    printf("\n\nInforme um valor em Fahrenheit: ");
+    scanf("%f", &fahrenheit_temperature);
+
+    float celsius_temperature;
+
+    // Formula para transformar Temp. em Celsius para Fahrenheit
+    // C = (F - 32) / 1.8
+    celsius_temperature = (fahrenheit_temperature - 32) / 1.8;
+
+    printf("\n\n> Temperatura equivalente em Celsius: %.2f", celsius_temperature);
+  }
+
+  if (conversion_measure != 'C' && conversion_measure != 'c' && conversion_measure != 'F' && conversion_measure != 'f') {
+    printf("\n\n> Voce informou valores incorretos, comece o programa novamente.\n");
+  }
+  
+  return 0;
+}
+  

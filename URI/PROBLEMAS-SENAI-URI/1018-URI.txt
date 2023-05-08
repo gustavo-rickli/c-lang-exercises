@@ -1,0 +1,59 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int n, r;
+ 
+    scanf("%d", &n);
+    
+    int n100;
+    
+    resto = n % 100;
+    
+    n100 = n - r;
+    
+    int n50;
+    
+    n50 = r - (r%50);
+    
+    r = r%50;
+    
+    int n20;
+    
+    n20 = r - (r%20);
+    
+    n20 = r % 20;
+    
+    int n10;
+    
+    n10 = r - (r%10);
+    
+    n10 = r % 10;
+    
+    int n5;
+    
+    n5 = r - (r%5);
+    
+    n5 = r % 5;
+    
+    int n2;
+    
+    n2 = r - (r%2);
+    
+    n2 = r % 2;
+    
+    int n1;
+    
+    n1 = r;
+    
+    printf("%d\n", 
+    printfnota(s) de R$ 100,00\n", notas_de_100);
+    printf("%d nota(s) de R$ notas_de_50);
+printf("%d nota(s) de R$ notas_de_5);
+    printf("%d nota(s) de R$ 2,00\n", notas_de_2);
+    printf("%d nota(s) R$ 1,00\n", notas_de_1);
+    printf("%d nota(s) de R$ 20,00\n", notas_de_20);
+    
+    return 0;

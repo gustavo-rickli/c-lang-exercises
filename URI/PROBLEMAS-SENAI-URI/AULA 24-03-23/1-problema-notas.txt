@@ -1,0 +1,34 @@
+/*
+   1) Problema “Notas”
+   Fazer um programa para ler as duas notas que um aluno obteve no primeiro e segundo semestres de
+   uma disciplina anual. Em seguida, mostrar a nota final que o aluno obteve (com uma casa decimal) no
+   ano juntamente com um texto explicativo. Caso a nota final do aluno seja inferior a 60.00, mostrar a
+   mensagem "REPROVADO", conforme exemplos.
+*/
+
+#include <stdio.h>
+
+
+int main() {
+
+  float first_note, second_note;
+
+  printf("\nDigite a nota do primeiro semestre: ");
+  scanf("%f", &first_note);
+
+  printf("\nDigite a nota do segundo semestre: ");
+  scanf("%f", &second_note);
+
+  float final_note;
+
+  final_note = first_note + second_note;
+
+  if (final_note < 60) {
+    printf("\nNOTA FINAL = %.2f\nREPROVADO\n", final_note);
+  } else {
+    printf("\nNOTA FINAL = %.2f\n", final_note);
+  }
+  
+  return 0;
+}
+  
